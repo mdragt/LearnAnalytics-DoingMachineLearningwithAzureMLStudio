@@ -302,6 +302,8 @@ Visualize the **automobile price prediction** data from the lab
 
 --------------------------------------------------------------------------------
 
+# Variables
+
 **Tabular data** is made up of rows and columns. Statisticians sometimes call them <mark>observations and variables</mark>.
 
 Some variables are <mark>numeric</mark>. Numeric variables may be **discreet** or **continuous**.
@@ -309,6 +311,10 @@ Some variables are <mark>numeric</mark>. Numeric variables may be **discreet** o
 Some variables are <mark>categorical</mark>. Categorical variables may be **nominal** when there is no order or **ordinal** when there is an order. Categorical data with only two categories is sometimes called **binary**.
 
 <mark>A numeric variable can sometimes be treated (by us and our models) as if it's categorical.</mark>
+
+A **dependent** variable is of primary interest to the researcher. The goal of the experiment is to predict this variable. We call this variable also **target**. 
+An **independent** variable influences the dependent variable in either positive or negative way. The variance in the dependent variable is accounted for by the Iindependent variable. These variables are also called **features**.
+
 
 <!-- Since we're going explore data, let's begin by what we mean by data. You hear data is everywhere these days and certainly the amount of data that is being collected these days has gone by through the roof, but so has the variety of data. For example, data is increasingly being stored in so-called no-SQL databases in addition to conventional relational databases. However, when it comes to doing machine learning, the great majority of ML algorithms only work with tabular data, that is data with rows and columns. Statisticians tend to use the word observations when talking about rows, and variables when talking about columns. Variables are broadly divided into numeric variables and categorical variables. Numeric variables can be discreet, which means they can be counted (think of an integer variable) or they can be continuous which is any variable with decimals. Categorical variables are called nominal when the categories are just names (like male vs female), and called ordinal when the categories have an inherent ordering to them (like low-income, middle-income and high-income). Lastly, a numeric variable can sometimes be treated as a categorical variable. And we see an example of that in the labs. -->
 
@@ -891,8 +897,8 @@ However imagine a linear model with dozens of features and you can see that hard
 
 --------------------------------------------------------------------------------
 
-8. Connect <button>Score Model</button> to <button>Evaluate Model</button> and run it to evaluate the predictions. Note that we can do this here because the data we scores the ordinal data used to train the model (so it is labeled). We evaluate models so we make sure they are a good fit.
-9. Right-click on <button>Evaluate Model</button> and select "Evaluation results" and "Visualize" to see the evaluation metrics. How is your overall fit for this model?
+9. Connect <button>Score Model</button> to <button>Evaluate Model</button> and run it to evaluate the predictions. Note that we can do this here because the data we scores the ordinal data used to train the model (so it is labeled). We evaluate models so we make sure they are a good fit.
+10. Right-click on <button>Evaluate Model</button> and select "Evaluation results" and "Visualize" to see the evaluation metrics. How is your overall fit for this model?
 
 More on model evaluation in the next chapter.
 
@@ -904,9 +910,9 @@ Sometimes when we use a decision tree to predict a number, we refer to it as a *
 
 --------------------------------------------------------------------------------
 
-10. Change <button>Linear Regression</button> to <button>Decision Forest Regression</button> and set "Number of decision trees" to 1 and "Maximum depth of decision tree" to 4 and uncheck "Allow unknown values for categorical features". Run the whole experiment.
-11. Right-click on <button>Train Model</button> and choose "Trained model" and "Visualize".
-12. Right-click on <button>Score Model</button> and choose "Scored dataset" and "Visualize". The predictions are shown in the column called `Scored Label Mean`. Why is it common to see the same set of numbers for the predictions?
+11. Change <button>Linear Regression</button> to <button>Decision Forest Regression</button> and set "Number of decision trees" to 1 and "Maximum depth of decision tree" to 4 and uncheck "Allow unknown values for categorical features". Run the whole experiment.
+12. Right-click on <button>Train Model</button> and choose "Trained model" and "Visualize".
+13. Right-click on <button>Score Model</button> and choose "Scored dataset" and "Visualize". The predictions are shown in the column called `Scored Label Mean`. Why is it common to see the same set of numbers for the predictions?
 
 --------------------------------------------------------------------------------
 
@@ -943,7 +949,7 @@ A screenshot of the experiment is shown in the [here](#screenshotlab5a).
 --------------------------------------------------------------------------------
 
 5. Right-click on <button>Score Model</button> and choose "Scored dataset" and "Visualize".
-6. The predictions are shown in a column called `Scored Labels`. Each prediction is associated with a probabilty in the column `Scored Probabilties`. Find a row where a misclassification occured and see if you can guess why.
+6. The predictions are shown in a column called `Scored Labels`. Each prediction is associated with a probability in the column `Scored Probabilities`. Find a row where a misclassification occured and see if you can guess why.
 7. Right-click on <button>Evaluate Model</button> and choose "Evaluation results" and "Visualize". Report the accuracy and the AUC for this model.
 8. What do the false negatives and false positives represent?
 
